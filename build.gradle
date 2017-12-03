@@ -1,0 +1,51 @@
+buildscript {
+    ext {
+        kotlinVersion = '1.2.0'
+        springBootVersion = '1.5.8.RELEASE'
+    }
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlinVersion"
+	}
+}
+
+apply plugin: "kotlin"
+apply plugin: 'org.springframework.boot'
+apply plugin: "kotlin-spring"
+apply plugin: "idea"
+
+repositories {
+	mavenCentral()
+}
+
+springBoot {
+    executable = true
+}
+
+jar {
+    baseName = "smart_tree"
+    version = "0.1"
+}
+
+dependencies {
+    //Spring
+    compile"org.springframework.boot:spring-boot-starter-security:$springBootVersion"
+    compile"org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+
+    //Kotlin
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
+
+    //Jackson
+    compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.2"
+    compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.0"
+
+    //SWAGGER
+    compile "io.springfox:springfox-swagger2:2.7.0"
+    compile "io.springfox:springfox-swagger-ui:2.7.0"
+}

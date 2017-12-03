@@ -1,0 +1,10 @@
+smart_tree:
+  client_id:
+server:
+  context-path: /smart_tree
+  port: 8091
+logging:
+  file: smart_tree
+  path: log
+  level:
+    root: info
