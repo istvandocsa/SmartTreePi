@@ -23,9 +23,8 @@ hs_err_pid*
 
 .gradle/
 .idea/
-auth/
 build/
-core/
+log/
 deployment/
 settings.gradle
 out/
