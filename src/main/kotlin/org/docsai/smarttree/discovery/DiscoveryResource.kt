@@ -1,4 +1,4 @@
-package org.docsai.smarttree
+package org.docsai.smarttree.discovery
 
 import org.docsai.smarttree.common.SmartTreeDetails
 import org.springframework.web.bind.annotation.GetMapping

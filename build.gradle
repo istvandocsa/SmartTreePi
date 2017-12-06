@@ -34,8 +34,10 @@ jar {
 
 dependencies {
     //Spring
-    compile"org.springframework.boot:spring-boot-starter-security:$springBootVersion"
-    compile"org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+    compile "org.springframework.boot:spring-boot-starter-security:$springBootVersion"
+    compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+    compile "org.springframework.boot:spring-boot-starter-integration:$springBootVersion"
+    compile "org.springframework.integration:spring-integration-mqtt:4.3.13.RELEASE"
 
     //Kotlin
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"

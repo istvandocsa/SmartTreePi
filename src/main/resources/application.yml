@@ -1,5 +1,6 @@
 smart_tree:
-  client_id:
+  mqtt:
+    host: "tcp://localhost:1883"
 server:
   context-path: /smart_tree
   port: 8091
