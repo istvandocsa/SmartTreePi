@@ -1,6 +1,8 @@
 package org.docsai.smarttree.common
 
 import org.docsai.smarttree.common.iface.AlexaInterface
+import org.docsai.smarttree.common.iface.BrightnessController
+import org.docsai.smarttree.common.iface.ColorController
 import org.docsai.smarttree.common.iface.PowerController
 
 object SmartTreeDetails {
@@ -13,5 +15,5 @@ object SmartTreeDetails {
     val description: String =  "Raspberry Pi powered SmartTree"
     val isReachable: Boolean = true
     val cookie: Map<String, String> =  mapOf("Additional" to "None")
-    val capabilities: List<AlexaInterface> = listOf(PowerController)
+    val capabilities: List<AlexaInterface> = listOf(PowerController, BrightnessController, ColorController)
 }
