@@ -1,6 +1,6 @@
 package org.docsai.smarttree.common.iface
 
-object PowerController: AlexaInterface() {
+object PowerController: ReportingAlexaInterface() {
     override val `interface`: String
         get() = "Alexa.PowerController"
     override val properties: InterfaceProperties<Map<String, String>>
